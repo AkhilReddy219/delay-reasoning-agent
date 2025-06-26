@@ -1,7 +1,7 @@
 from datetime import datetime
 from utils.helpers import parse_iso, time_diff_minutes
 
-class DelayReasoningAgent:
+class RuleBasedAgent:
 
     def analyze_shipment(self, shipment):
         explanations = []

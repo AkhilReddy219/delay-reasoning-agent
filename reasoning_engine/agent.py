@@ -23,14 +23,18 @@ class DelayReasoningAgent:
 
         # 2. Dwell time per location (based on STOP_START and STOP_END)
         location_events = {}
+        
         for e in events:
             loc = e["location"]
             location_events.setdefault(loc, []).append(e)
 
         for loc, logs in location_events.items():
-            if len(logs) == 2:
-                start = parse_iso(logs[0]["timestamp"])
-                end = parse_iso(logs[1]["timestamp"])
+            start_event = next((e for e in logs if e["event_type"] == "STOP_START"), None)
+            end_event = next((e for e in logs if e["event_type"] == "STOP_END"), None)
+
+            if start_event and end_event:
+                start = parse_iso(start_event["timestamp"])
+                end = parse_iso(end_event["timestamp"])
                 dwell = time_diff_minutes(start, end)
                 if dwell > 20:
                     explanations.append(

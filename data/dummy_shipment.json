@@ -1,0 +1,71 @@
+[
+  {
+    "shipment_id": "SHIP001",
+    "planned_milestones": {
+      "Hub1": "2025-06-25T10:00:00",
+      "Hub2": "2025-06-25T11:00:00"
+    },
+    "actual_milestones": {
+      "Hub1": "2025-06-25T10:30:00",
+      "Hub2": "2025-06-25T11:40:00"
+    },
+    "event_log": [
+      {
+        "event_type": "STOP_START",
+        "timestamp": "2025-06-25T10:30:00",
+        "location": "Hub1"
+      },
+      {
+        "event_type": "STOP_END",
+        "timestamp": "2025-06-25T11:10:00",
+        "location": "Hub1"
+      }
+    ]
+  },
+  {
+    "shipment_id": "SHIP002",
+    "planned_milestones": {
+      "Hub1": "2025-06-25T09:00:00",
+      "Hub2": "2025-06-25T10:00:00"
+    },
+    "actual_milestones": {
+      "Hub1": "2025-06-25T09:00:00",
+      "Hub2": "2025-06-25T10:00:00"
+    },
+    "event_log": [
+      {
+        "event_type": "STOP_START",
+        "timestamp": "2025-06-25T09:00:00",
+        "location": "Hub1"
+      },
+      {
+        "event_type": "STOP_END",
+        "timestamp": "2025-06-25T09:15:00",
+        "location": "Hub1"
+      }
+    ]
+  },
+  {
+    "shipment_id": "SHIP003",
+    "planned_milestones": {
+      "Hub1": "2025-06-25T12:00:00",
+      "Hub2": "2025-06-25T13:00:00"
+    },
+    "actual_milestones": {
+      "Hub1": "2025-06-25T11:40:00",
+      "Hub2": "2025-06-25T12:45:00"
+    },
+    "event_log": [
+      {
+        "event_type": "STOP_START",
+        "timestamp": "2025-06-25T11:40:00",
+        "location": "Hub1"
+      },
+      {
+        "event_type": "STOP_END",
+        "timestamp": "2025-06-25T12:00:00",
+        "location": "Hub1"
+      }
+    ]
+  }
+]
